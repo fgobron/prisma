@@ -1,3 +1,8 @@
+/**
+ * Application bootstrap module
+ * @namespace Init
+ */
+
 import * as Dom from './utils/dom';
 import * as Data from './utils/data';
 
