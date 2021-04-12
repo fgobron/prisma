@@ -1,4 +1,4 @@
-export function generateTitle() {
+function generateTitle() {
   const h1 = document.createElement('h1');
   const h1Text = document.createTextNode('Prisma Media - Clients list filter');
 
@@ -6,7 +6,9 @@ export function generateTitle() {
   document.body.appendChild(h1);
 }
 
-export function generateTable() {
+function generateTable() {
   const table = document.createElement('table');
   document.body.appendChild(table);
 }
+
+export { generateTitle, generateTable };
