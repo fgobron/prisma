@@ -1,15 +1,15 @@
-/* eslint-disable arrow-parens */
 import * as Dom from './utils/dom';
-import getList from './utils/data';
+import * as Data from './utils/data';
 
 /* Application entrypoint */
 const init = () => {
   /* eslint-disable no-console */
   console.log('Prisma Media - Clients list filter app');
   Dom.generateTitle();
-  getList().then(data => {
+  Data.getList().then((datas) => {
+    const clients = Data.extractClients(datas);
     /* eslint-disable no-console */
-    console.log(data);
+    console.log(clients);
   });
 };
 
