@@ -14,17 +14,23 @@ const init = () => {
   Dom.generateTitle();
   // Fetch exhaustive clients list
   Data.getList().then((datas) => {
-    const clients = Data.extractClients(datas);
+    let clients = Data.extractClients(datas);
     /* eslint-disable no-console */
     console.log(clients);
     // Apply filter on eyeColor if necessary
-    const eyeColorParam = getQueryParamValue('eyeColor');
-    /* eslint-disable no-console */
-    console.log(eyeColorParam);
+    const eyeColorValue = getQueryParamValue('eyeColor');
+    if (eyeColorValue !== null) {
+      clients = Data.filterClientsBySimpleCriteria(clients, 'eyeColor', eyeColorValue);
+      /* eslint-disable no-console */
+      console.log(clients);
+    }
     // Apply filter on age if necessary
-    const ageRangeParam = getQueryParamValue('ageRange');
-    /* eslint-disable no-console */
-    console.log(ageRangeParam);
+    const ageRangeValue = getQueryParamValue('ageRange');
+    if (ageRangeValue !== null) {
+      clients = Data.filterClientsByRangeCriteria(clients, 'age', ageRangeValue);
+      /* eslint-disable no-console */
+      console.log(clients);
+    }
   });
 };
 
