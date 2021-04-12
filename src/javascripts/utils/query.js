@@ -5,20 +5,12 @@
 
 /**
  * get querystring param value
- * @param {String} [query] querystring parameters subpart
- * @param {String} [param] querystring param name
- * @returns {string} unescape value
+ * @param {String} [query] querystring subpart
+ * @returns {Array} Array of keys and entries from the URL search params
+ * Sample : ?eyeColor=brown&ageRange=20-35 => [['eyeColor', 'brown'], ['ageRange', '20-35']]
  */
-function getQueryParamValue(param) {
-  const query = window.location.search.substring(1);
-  const params = query.split('&');
-  for (let i = 0; i < params.length; i += 1) {
-    const pair = params[i].split('=');
-    if (pair[0] === param) {
-      return unescape(pair[1]);
-    }
-  }
-  return null;
+function parseQueryString(qs) {
+  return qs.replace(/^\?/, '').split('&').map((s) => s.split('=').map((v) => decodeURIComponent(v)));
 }
 
-export default getQueryParamValue;
+export default parseQueryString;

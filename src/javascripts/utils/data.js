@@ -34,7 +34,7 @@ export function filterClientsBySimpleCriteria(list, param, value) {
 }
 
 /**
- * generic filter by range numeric criteria on clients list
+ * generic filter by numeric range criteria on clients list
  * @param {Array} [list] list of clients
  * @param {String} [param] querystring param name
  * @param {String} [value] querystring param value as range ex : 20-25
