@@ -1,20 +1,17 @@
 {
-  "name": "static-site-boilerplate",
-  "description": "A modern boilerplate for static website development",
-  "version": "1.1.0",
-  "homepage": "http://staticsiteboilerplate.com",
+  "name": "globalis-prisma-test",
+  "description": "Globalis Prisma recruitment test",
+  "version": "0.1.1",
+  "homepage": "https://github.com/fgobron/prisma",
   "author": {
-    "name": "Eric Alli",
-    "url": "http://ericalli.com"
+    "name": "Frédéric GOBRON",
+    "url": "http://alternetdev.net/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ericalli/static-site-boilerplate.git"
+    "url": "git+https://github.com/fgobron/prisma.git"
   },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ericalli/static-site-boilerplate/issues"
-  },
   "keywords": [
     "html5",
     "css3",
@@ -24,7 +21,11 @@
     "less",
     "static",
     "boilerplate",
-    "webpack"
+    "webpack",
+    "Globalis",
+    "Prisma",
+    "test",
+    "recruitment"
   ],
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.config.js",
