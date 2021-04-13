@@ -1,7 +1,7 @@
 {
   "name": "globalis-prisma-test",
   "description": "Globalis Prisma recruitment test",
-  "version": "0.8.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/fgobron/prisma",
   "author": {
     "name": "Frédéric GOBRON",
