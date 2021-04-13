@@ -11,7 +11,7 @@ export function getList() {
 }
 /**
  * Extract useful subset of properties from raw datas
- * @param {Array} [list]
+ * @param {Array} list
  * @returns {Array} Reduced list of properties as client entity
  */
 export function extractClients(list) {
@@ -24,9 +24,9 @@ export function extractClients(list) {
 
 /**
  * generic filter by string criteria on clients list
- * @param {Array} [list] list of clients
- * @param {String} [param] querystring param name
- * @param {String} [value] querystring param value
+ * @param {Array} list list of clients
+ * @param {String} param querystring param name
+ * @param {String} value querystring param value
  * @returns {Array} filtered list of clients on simple based value of criteria ex: eyeColor=blue
  */
 export function filterClientsBySimpleCriteria(list, param, value) {
@@ -35,10 +35,11 @@ export function filterClientsBySimpleCriteria(list, param, value) {
 
 /**
  * generic filter by numeric range criteria on clients list
- * @param {Array} [list] list of clients
- * @param {String} [param] querystring param name
- * @param {String} [value] querystring param value as range ex : 20-25
- * @returns {Array} filtered list of clients on simple based value of criteria ex: ageRange=20-25
+ * @param {Array} list list of clients
+ * @param {String} param querystring param name
+ * @param {String} value querystring param value as range
+ * @example ageRange=20-25
+ * @returns {Array} filtered list of clients on range based value of criteria
  */
 export function filterClientsByRangeCriteria(list, param, value) {
   const rangeValues = value.split('-');

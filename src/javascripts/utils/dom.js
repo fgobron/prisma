@@ -13,6 +13,11 @@ function generateTitle() {
   document.body.appendChild(h1);
 }
 
+/**
+ * table data content generator
+ * @param {Object} table HTMLTableElement container
+ * @param {Object} data list of keys as header for the table
+ */
 function generateTableHead(table, data) {
   const thead = table.createTHead();
   const row = thead.insertRow();
@@ -25,6 +30,11 @@ function generateTableHead(table, data) {
 }
 
 
+/**
+ * table data content generator
+ * @param {Object} table HTMLTableElement container
+ * @param {Object[]} list list of clients
+ */
 function generateTableContent(table, list) {
   list.forEach((item) => {
     const row = table.insertRow();
@@ -36,8 +46,10 @@ function generateTableContent(table, list) {
   });
 }
 
+
 /**
- * Main table data content generator
+ *  Main table generator
+ * @param {Object[]} clients list of clients
  */
 function generateTable(clients) {
   const table = document.createElement('table');
