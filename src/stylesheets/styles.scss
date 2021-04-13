@@ -1,26 +1,2 @@
 // Load CSS Reset from NPM
 @import "~normalize.css";
-
-$font-stack:    Helvetica, sans-serif;
-$primary-color: #333;
-
-body {
-  font: 100% $font-stack;
-  color: $primary-color;
-}
-
-h1 {
-  text-align: center;
-  font-weight: bold;
-}
-
-table {
-  th,
-  td {
-    text-align: center;
-  }
-
-  th {
-    text-transform: capitalize;
-  }
-}

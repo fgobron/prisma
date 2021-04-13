@@ -62,6 +62,19 @@ after setting up config/site.deploy.js file, run :
 npm run deploy
  ```
 
+ ## Prisma filter module usage
+ Must be implemented within a packager compliant with ES6 module support as Webpack+Babel
+
+ 1. Copy in your project directory **prismaFilter.js** script and subdirectories dependencies
+
+ - utils/data.js
+ - utils/dom.js
+ - utils/query.js
+
+2. Import main module as usual with intruction ``import generateFilteredList from './prismaFilter';``
+
+3. Call **generateFilteredList** method with json datas as param after asynchronous fecthing or import.
+
 ## Browser Support
 
 * Chrome _\(latest 2\)_
