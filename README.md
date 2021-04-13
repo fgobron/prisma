@@ -18,7 +18,48 @@ cd prisma
  ```
 
  ```bash
-rm -rf .git && git init
+rm -rf .git
+ ```
+
+ ```bash
+npm install
+ ```
+
+ ## Commands
+
+ To run the local development server:
+```bash
+npm run start
+ ```
+Your default web browser should open and navigate to http://localhost:8000.
+
+URL examples :
+
+// brown eye color and age between 20 and 25 filters
+
+<http://localhost:8000/?eyeColor=brown&ageRange=20-25>
+
+// blue eye color and age between 26 and 30 filters
+
+<http://localhost:8000/?eyeColor=blue&ageRange=26-30>
+
+
+
+To run the local production server:
+```bash
+npm run start:dist
+ ```
+
+ To build a production-ready version:
+ ```bash
+npm run build:dist
+ ```
+
+To deploy, copy the entire contents of dist/ into your web server or for deploying via FTP,
+after setting up config/site.deploy.js file, run :
+
+ ```bash
+npm run deploy
  ```
 
 ## Browser Support
