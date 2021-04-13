@@ -28,8 +28,6 @@ const init = () => {
           // No filter
       }
     });
-    /* eslint-disable no-console */
-    console.log(clients);
     Dom.generateTable(clients);
   });
 };

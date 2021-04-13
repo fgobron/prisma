@@ -17,8 +17,6 @@ function generateTableHead(table, data) {
   const thead = table.createTHead();
   const row = thead.insertRow();
   data.forEach((item) => {
-    /* eslint-disable no-console */
-    console.log(item);
     const th = document.createElement('th');
     const text = document.createTextNode(item);
     th.appendChild(text);
@@ -29,8 +27,12 @@ function generateTableHead(table, data) {
 
 function generateTableContent(table, list) {
   list.forEach((item) => {
-    /* eslint-disable no-console */
-    console.log(item);
+    const row = table.insertRow();
+    Object.keys(item).forEach((key) => {
+      const cell = row.insertCell();
+      const text = document.createTextNode(item[key]);
+      cell.appendChild(text);
+    });
   });
 }
 
