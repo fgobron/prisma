@@ -16,9 +16,9 @@ export function getList() {
  */
 export function extractClients(list) {
   return list.map(({
-    index, name, age, eyeColor, email, balance,
+    index, name: { first, last }, age, eyeColor, email, balance,
   }) => ({
-    index, name, age, eyeColor, email, balance,
+    index, first, last, age, eyeColor, email, balance,
   }));
 }
 

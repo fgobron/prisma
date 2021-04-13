@@ -30,6 +30,7 @@ const init = () => {
     });
     /* eslint-disable no-console */
     console.log(clients);
+    Dom.generateTable(clients);
   });
 };
 

@@ -13,11 +13,35 @@ function generateTitle() {
   document.body.appendChild(h1);
 }
 
+function generateTableHead(table, data) {
+  const thead = table.createTHead();
+  const row = thead.insertRow();
+  data.forEach((item) => {
+    /* eslint-disable no-console */
+    console.log(item);
+    const th = document.createElement('th');
+    const text = document.createTextNode(item);
+    th.appendChild(text);
+    row.appendChild(th);
+  });
+}
+
+
+function generateTableContent(table, list) {
+  list.forEach((item) => {
+    /* eslint-disable no-console */
+    console.log(item);
+  });
+}
+
 /**
  * Main table data content generator
  */
-function generateTable() {
+function generateTable(clients) {
   const table = document.createElement('table');
+  const headers = Object.keys(clients[0]);
+  generateTableContent(table, clients);
+  generateTableHead(table, headers);
   document.body.appendChild(table);
 }
 
