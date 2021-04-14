@@ -2,12 +2,11 @@
  * Application bootstrap module
  * @namespace Init
  */
-import datas from '../datas.json';
-import generateFilteredList from './prismaFilter';
+import generateFilteredList from 'prisma-filter/js/index';
 
 /* Application entrypoint */
 const init = () => {
-  generateFilteredList(datas);
+  generateFilteredList();
 };
 
 init();
